@@ -3,10 +3,10 @@
 <p>execute "composer install" for build application</p>
 <p>start application execute "php artisan serve"</p>
 
-<h2>loginFacebook </h2>
+<h2>Login Facebook </h2>
 <p>route: http://localhost:8000/login/facebook</p>
 
-<h2>getDataUser</h2>
+<h2>Return DataUser</h2>
 <p>route: http://localhost:8000/user</p>
 
 
