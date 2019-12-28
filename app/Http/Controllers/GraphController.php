@@ -13,7 +13,7 @@ class GraphController extends Controller
     public function __construct(Facebook $fb)
     {        
         $this->middleware(function ($request, $next) use ($fb) {            
-            $fb->setDefaultAccessToken(Auth::user()->remember_token);            
+            $fb->setDefaultAccessToken(Auth::user()->token);            
             $this->api = $fb;            
             return $next($request);
         });

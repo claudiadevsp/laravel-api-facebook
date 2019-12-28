@@ -48,19 +48,20 @@ class LoginController extends Controller
      */
     public function handleProviderFacebookCallback()
     {
-        $auth_user = Socialite::driver('facebook')->user();
-         
+        $auth_user = Socialite::driver('facebook')->user();                 
+        
         $user = User::updateOrCreate(
             [
-                'email' => $auth_user->email
-            ],
+                'email' => $auth_user->email,                
+            ],              
+            
             [
-                'token' => $auth_user->token,
+                'token' =>  $auth_user->token,
                 'name'  =>  $auth_user->name
             ]
         );
- 
-        Auth::login($user, true);
+        
+        Auth::login($user, true);        
         return redirect()->to('/'); // Redirect to a secure page
     }
 }
