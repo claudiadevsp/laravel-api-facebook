@@ -30,3 +30,7 @@ Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderFacebo
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -11,25 +11,26 @@ class GraphController extends Controller
 {
     private $api;
     public function __construct(Facebook $fb)
-    {
-        $this->middleware(function ($request, $next) use ($fb) {
-            $fb->setDefaultAccessToken(Auth::user()->token);
-            $this->api = $fb;
+    {        
+        $this->middleware(function ($request, $next) use ($fb) {            
+            $fb->setDefaultAccessToken(Auth::user()->remember_token);            
+            $this->api = $fb;            
             return $next($request);
         });
     }
  
     public function retrieveUserProfile(){
-        try {
+        try {            
  
-            $params = "first_name,last_name,age_range,gender";
- 
+            $params = "first_name,last_name";
+            
             $user = $this->api->get('/me?fields='.$params)->getGraphUser();
  
-            dd($user);
+            dd('usuario' . $user);
  
         } catch (FacebookSDKException $e) {
- 
+            
+            dd('erro');
         }
  
     }
