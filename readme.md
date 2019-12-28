@@ -1,3 +1,13 @@
+<p>execute "composer install" for build application</p>
+<p>start application execute "php artisan serve"</p>
+
+<h2>loginFacebook </h2>
+<p>route: http://localhost:8000/login/facebook</p>
+
+<h2>getDataUser</h2>
+<p>route: http://localhost:8000/user</p>
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
